@@ -27,7 +27,7 @@
   },
   "scripts": {
     "test": "jest",
-    "test-ci": "json-server db.json && npm run test",
+    "test-ci": "json-server db.json & npm run test",
     "test-watch": "jest --watchAll",
     "start:back-end": "json-server --watch db.json"
   },
