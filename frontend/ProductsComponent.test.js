@@ -28,9 +28,7 @@ test('DOM', () => {
     expect(root.children.length).toBe(0);
 });
 
-
 // test("render returns array", () => {
 //     const productsComponent = new ProductsComponent();
 //     expect(productsComponent.render().length).toBeGreaterThan(0)
 // })
-
