@@ -12,7 +12,7 @@ test("It has a fetchList() function", () => {
     expect(typeof service.fetchList).toBe("function");
 })
 
-test("fetchList returns promise", async () => {
+test("fetchList returns promise", () => {
     const promise = isPromise((service.fetchList()));
     expect(promise).toBeTruthy();
 })
