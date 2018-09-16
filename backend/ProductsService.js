@@ -5,13 +5,11 @@ class ProductsService {
 
     async fetchList() {
         if(new Date().getTime() - this.lastFetchTime > this.cacheTime){
-            console.log("Hi!")
             this.lastFetchTime = new Date().getTime();
-            this.response = await this.fetch(this.url)
+            this.response = this.fetch(this.url)
             .then(body => body.json());
-            console.log(this.response)
         }
-        return this.response
+        return await this.response
     }
     
     setFetcher(fetch) {

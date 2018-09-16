@@ -1,4 +1,4 @@
-import fetch from "node-fetch";
+import fetch from "../fixtures/fetch";
 import ProductsService from "./ProductsService";
 import isPromise from "is-promise";
 
@@ -21,3 +21,4 @@ test("fetchList returns array of elements", async () => {
     const products = await service.fetchList();
     expect(products.length).toBeGreaterThan(0);
 })
+
