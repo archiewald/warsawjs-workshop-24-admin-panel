@@ -29,6 +29,7 @@
     "test": "jest",
     "test-ci": "npm run test",
     "test-watch": "jest --watchAll",
+    "start:backend": "json-server backend/db.json",
     "start:frontend": "webpack -w frontend/scripts/main.js -o frontend/dist/bundle.js --mode development"
   },
   "keywords": [],
