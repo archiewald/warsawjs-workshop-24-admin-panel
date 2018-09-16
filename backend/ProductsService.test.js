@@ -1,4 +1,4 @@
-import fetch from "../fixtures/fetch";
+import fetch from "../fixtures/fakeFetch";
 import ProductsService from "./ProductsService";
 import isPromise from "is-promise";
 
