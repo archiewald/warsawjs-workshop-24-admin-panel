@@ -1,14 +1,20 @@
-import fetch from "node-fetch";
-
 class ProductsService {
 
     products = 'http://localhost:3000/products';
 
     async fetchList() {
-        return await fetch(this.products)
+        return await this.fetch(this.products)
             .then(body => body.json());
     }
-
+    
+    setFetcher(fetch) {
+        this.fetch = fetch;
+        return this;
+    }
+    
 }
 
-export default new ProductsService();
+const service = new ProductsService();
+
+// dependency injection
+export default (fetch) => service.setFetcher(fetch);
